@@ -1,0 +1,23 @@
+# Core libraries
+streamlit==1.31.0
+pandas==2.1.4
+numpy==1.26.3
+
+# Time series & forecasting
+statsmodels==0.14.1
+pmdarima==2.0.4
+
+# Metrics
+scikit-learn==1.4.0
+
+# Visualization
+plotly==5.18.0
+matplotlib==3.8.2
+seaborn==0.13.1
+
+# File handling
+openpyxl==3.1.2
+xlrd==2.0.1
+
+# Utilities
+python-dateutil==2.8.2

@@ -1,0 +1,146 @@
+{
+    "Beras Premium": {
+        "order": [
+            3,
+            0,
+            0
+        ],
+        "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "model_type": "ARIMA",
+        "aic": 1259.3897830886701,
+        "bic": 1272.4156340186105,
+        "tuning_date": "2025-12-13 02:18:55",
+        "is_tuned": true
+    },
+    "Bawang Merah": {
+        "order": [
+            2,
+            0,
+            0
+        ],
+        "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "model_type": "ARIMA",
+        "aic": null,
+        "bic": null,
+        "tuning_date": null,
+        "is_tuned": false
+    },
+    "Bawang Putih": {
+        "order": [
+            1,
+            1,
+            1
+        ],
+        "seasonal_order": [
+            1,
+            1,
+            0,
+            52
+        ],
+        "model_type": "SARIMA",
+        "aic": null,
+        "bic": null,
+        "tuning_date": null,
+        "is_tuned": false
+    },
+    "Cabai Merah kriting": {
+        "order": [
+            2,
+            1,
+            1
+        ],
+        "seasonal_order": [
+            1,
+            1,
+            1,
+            52
+        ],
+        "model_type": "SARIMA",
+        "aic": null,
+        "bic": null,
+        "tuning_date": null,
+        "is_tuned": false
+    },
+    "Telur Ayam Ras": {
+        "order": [
+            1,
+            1,
+            1
+        ],
+        "seasonal_order": [
+            1,
+            1,
+            1,
+            52
+        ],
+        "model_type": "SARIMA",
+        "aic": null,
+        "bic": null,
+        "tuning_date": null,
+        "is_tuned": false
+    },
+    "Gula": {
+        "order": [
+            1,
+            1,
+            1
+        ],
+        "seasonal_order": [
+            0,
+            1,
+            1,
+            52
+        ],
+        "model_type": "SARIMA",
+        "aic": null,
+        "bic": null,
+        "tuning_date": null,
+        "is_tuned": false
+    },
+    "Minyak Goreng Kemasan": {
+        "order": [
+            1,
+            1,
+            1
+        ],
+        "seasonal_order": [
+            1,
+            1,
+            1,
+            52
+        ],
+        "model_type": "SARIMA",
+        "aic": null,
+        "bic": null,
+        "tuning_date": null,
+        "is_tuned": false
+    },
+    "Garam": {
+        "order": [
+            1,
+            1,
+            1
+        ],
+        "seasonal_order": [
+            1,
+            1,
+            0,
+            52
+        ],
+        "model_type": "SARIMA",
+        "aic": null,
+        "bic": null,
+        "tuning_date": null,
+        "is_tuned": false
+    }
+}
