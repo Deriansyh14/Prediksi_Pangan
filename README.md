@@ -2,14 +2,6 @@
 
 Sistem Prediksi Harga Komoditas Pangan berbasis Time Series Analysis menggunakan model ARIMA dan SARIMA.
 
-## 📋 Daftar Isi
-
-- [Fitur](#fitur)
-- [Instalasi](#instalasi)
-- [Cara Menggunakan](#cara-menggunakan)
-- [Format Dataset](#format-dataset)
-- [Deployment](#deployment)
-- [Troubleshooting](#troubleshooting)
 
 ## ✨ Fitur
 
@@ -43,29 +35,6 @@ Sistem Prediksi Harga Komoditas Pangan berbasis Time Series Analysis menggunakan
 - Python 3.8+
 - Virtual Environment (recommended)
 
-### Setup Local
-
-```bash
-# Clone atau download repository
-cd PSD
-
-# Buat virtual environment
-python -m venv .venv
-
-# Aktivasi virtual environment
-# Windows:
-.venv\Scripts\activate
-# Linux/macOS:
-source .venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Jalankan aplikasi
-streamlit run app.py
-```
-
-Aplikasi akan membuka di `http://localhost:8501`
 
 ## 🚀 Cara Menggunakan
 
@@ -121,98 +90,6 @@ Periode    | Beras Premium | Bawang Merah | Bawang Putih | ...
   - Gula
   - Minyak Goreng Kemasan
   - Garam
-
-## 🌐 Deployment
-
-### Deployment ke Streamlit Cloud
-
-1. **Push ke GitHub**
-```bash
-git add .
-git commit -m "Deploy aplikasi prediksi pangan"
-git push origin main
-```
-
-2. **Buka Streamlit Cloud** (https://streamlit.io/cloud)
-3. **Create New App**
-   - Repository: `sains-data/Stokastik_4_RB`
-   - Branch: `main`
-   - Main file path: `app.py`
-
-4. **Deploy** - Streamlit akan otomatis build dan deploy
-
-### Deployment ke Server Own (Linux/Ubuntu)
-
-```bash
-# Install Python & dependencies
-sudo apt-get update
-sudo apt-get install python3.10 python3.10-venv
-
-# Clone repository
-git clone https://github.com/sains-data/Stokastik_4_RB.git
-cd Stokastik_4_RB
-
-# Setup virtual environment
-python3.10 -m venv venv
-source venv/bin/activate
-
-# Install requirements
-pip install -r requirements.txt
-
-# Jalankan dengan gunicorn/systemd (recommended)
-# Atau gunakan screen:
-screen -S pangan
-streamlit run app.py --server.port 8501 --server.address 0.0.0.0
-```
-
-### Deployment ke Docker
-
-```dockerfile
-FROM python:3.10-slim
-
-WORKDIR /app
-
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY . .
-
-EXPOSE 8501
-
-CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
-```
-
-```bash
-# Build image
-docker build -t prediksi-pangan .
-
-# Run container
-docker run -p 8501:8501 prediksi-pangan
-```
-
-## 📁 Struktur Folder
-
-```
-PSD/
-├── app.py                          # Home page
-├── requirements.txt                # Python dependencies
-├── requirments.txt                 # (typo - untuk referensi lama)
-├── check_env.py                    # Environment checker
-├── README.md                        # Dokumentasi
-├── DEPLOYMENT_GUIDE.md             # Panduan deployment
-├── .streamlit/
-│   └── config.toml                 # Streamlit config
-├── models/
-│   └── best_params.json            # Parameter ARIMA/SARIMA per komoditas
-├── pages/
-│   └── prediksi_pangan.py          # Halaman utama prediksi
-├── src/
-│   ├── __init__.py
-│   ├── utils.py                    # Utility functions (load, preprocess, metrics)
-│   ├── load_model.py               # Load & manage parameters
-│   └── forecasting.py              # ARIMA/SARIMA modeling
-└── __pycache__/
-```
 
 ## 🔧 Troubleshooting
 
@@ -275,7 +152,7 @@ Setiap komoditas akan menunjukkan:
 
 2. **Akurasi Validasi**
    - MAE, RMSE, MAPE
-   - Interpretasi akurasi (🟢/🔵/🟡/🔴)
+   - Interpretasi akurasi 
    - Tabel perbandingan aktual vs prediksi
 
 3. **Visualisasi**
@@ -289,12 +166,3 @@ Setiap komoditas akan menunjukkan:
    - Visualisasi historis + forecast
    - File CSV untuk download
 
-## 📞 Support
-
-Untuk pertanyaan atau issue, silakan buat issue di repository atau hubungi tim development.
-
----
-
-**Last Updated:** December 2025
-**Version:** 1.0
-**Author:** Tim Data Science
